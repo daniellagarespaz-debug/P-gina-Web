@@ -28,6 +28,6 @@ El proyecto se organiza de forma modular para facilitar su mantenimiento:
 * `styles.css`: Núcleo de estilos centralizado que gestiona la lógica visual y el diseño responsivo de toda la aplicación.
 
 ## Requisitos de Ejecución
-Al ser una aplicación web estática, no requiere de un entorno de ejecución de servidor complejo. Puede ser visualizada directamente abriendo el archivo `index.html` en cualquier navegador moderno con soporte para estándares HTML5 y CSS3.
+Al ser una aplicación web estática, no requiere de un entorno de ejecución de servidor complejo. Puede ser visualizada directamente abriendo el archivo `index.html` en cualquier navegador moderno con soporte para estándares HTML5 y CSS.
 
 Aquí un vídeo del proyecto: https://drive.google.com/file/d/1b_oZ-y-eYfw4zqg-YTEZ-TVKvEjPmmFV/view?usp=sharing

@@ -1,0 +1,250 @@
+/* CONFIGURACIÓN GENERAL */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(180deg, #1a0b2e 0%, #09050f 100%);
+    background-attachment: fixed;
+    color: white;
+    font-family: 'Kanit', sans-serif;
+    margin: 0;
+}
+
+.body-index {
+    display: grid;
+    grid-template-rows: auto 1fr 80px;
+    min-height: 100vh;
+}
+
+/* HEADER */
+.header-index {
+    background: linear-gradient(rgba(26, 11, 46, 0.8), rgba(9, 5, 15, 0.5)), url('header.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid #333333;
+    font-family: 'Orbitron', sans-serif;
+    padding: 60px 20px;
+    color: #ffffff;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8), 0px 0px 20px rgba(102, 0, 255, 0.5);
+    position: relative;
+    text-align: center;
+}
+
+.header-index h1 {
+    margin: 0;
+    font-size: clamp(24px, 5vw, 50px);
+    width: 80%; 
+}
+
+.btn-volver {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    border: 1px solid white;
+    padding: 8px 15px;
+    font-size: 12px;
+    transition: all 0.3s ease;
+    background: rgba(0,0,0,0.3);
+    z-index: 10;
+}
+
+/* Ajuste para móviles para que el botón no tape nada */
+@media (max-width: 768px) {
+    .btn-volver {
+        position: relative;
+        top: 0;
+        right: 0;
+        margin-bottom: 20px;
+        order: -1; /* Pone el botón arriba del título en móvil */
+    }
+    .header-index {
+        padding: 40px 20px;
+    }
+}
+
+.btn-volver:hover {
+    background-color: white;
+    color: black;
+}
+
+/* SECCIÓN DE CONSOLAS */
+.consolas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 80px 20px 60px 20px;
+}
+
+.card {
+    width: 250px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.card img {
+    max-width: 180px;
+    max-height: 90px;
+    object-fit: contain;
+}
+
+.nintendo { background-color: #e70012; }
+.nintendo:hover { transform: scale(1.05); box-shadow: 0px 0px 25px #e70012; }
+
+.sega { background-color: #ffffff; }
+.sega:hover { transform: scale(1.05); box-shadow: 0px 0px 25px #ffffff; }
+
+.playstation { background-color: #1355e1; }
+.playstation:hover { transform: scale(1.05); box-shadow: 0px 0px 25px #1355e1; }
+
+.xbox { background-color: #107c10; }
+.xbox:hover { transform: scale(1.05); box-shadow: 0px 0px 25px #107c10; }
+
+/* SECCIONES DE PERSONAJES */
+.section-personajes {
+    padding: 100px 20px;
+    text-align: center;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.section-personajes h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 35px;
+    letter-spacing: 3px;
+    margin-bottom: 50px;
+}
+
+.personajes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.card-char {
+    width: 220px;
+    height: 300px;
+    background-color: rgba(37, 37, 37, 0.6);
+    border: 2px solid #444444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 11px;
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card-char:hover {
+    transform: translateY(-10px);
+}
+
+/* DISEÑO DE LA BIOGRAFÍA */
+.biografia {
+    max-width: 900px;
+    margin: 40px auto;
+    text-align: justify;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.7);
+    border-left: 5px solid #e70012; 
+    border-radius: 0 15px 15px 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.biografia p {
+    font-family: 'Kanit', sans-serif;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #e0e0e0;
+    margin-bottom: 25px;
+}
+
+.biografia strong {
+    color: #e70012; 
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+    display: block;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.biografia em {
+    color: #fff;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* Nintendo */
+.nintendo-bg { background: linear-gradient(180deg, #1a0b0b 0%, #09050f 100%); }
+.nintendo-bg h2 { color: #e70012; text-shadow: 0px 0px 15px rgba(231, 0, 18, 0.6); }
+.nintendo-bg .card-char:hover { border-color: #e70012; box-shadow: 0px 0px 25px #e70012; color: #e70012; }
+
+/* Sega */
+.sega-bg { background: linear-gradient(180deg, #0b141a 0%, #05050f 100%); }
+.sega-bg h2 { color: #ffffff; text-shadow: 0px 0px 15px rgba(0, 137, 207, 0.6); }
+.sega-bg .card-char:hover { border-color: #0089cf; box-shadow: 0px 0px 25px #0089cf; color: #0089cf; }
+.bio-sega { border-left-color: #0089cf; }
+.bio-sega strong { color: #0089cf; }
+
+/* PlayStation */
+.playstation-bg { background: linear-gradient(180deg, #0b0d1a 0%, #05050f 100%); }
+.playstation-bg h2 { color: #1355e1; text-shadow: 0px 0px 15px rgba(19, 85, 225, 0.6); }
+.playstation-bg .card-char:hover { border-color: #1355e1; box-shadow: 0px 0px 25px #1355e1; color: #1355e1; }
+.bio-play { border-left-color: #1355e1; }
+.bio-play strong { color: #1355e1; }
+
+/* Xbox */
+.xbox-bg { background: linear-gradient(180deg, #0b1a0b 0%, #050f05 100%); }
+.xbox-bg h2 { color: #107c10; text-shadow: 0px 0px 15px rgba(16, 124, 16, 0.6); }
+.xbox-bg .card-char:hover { border-color: #107c10; box-shadow: 0px 0px 25px #107c10; color: #107c10; }
+.bio-xbox { border-left-color: #107c10; }
+.bio-xbox strong { color: #107c10; }
+
+/* IMÁGENES DE PERSONAJES */
+.mario { background-image: linear-gradient(rgba(0,0,0,0.03), rgba(0,0,0,0.4)), url(Mario.png) }
+.link{ background-image: linear-gradient(rgba(0,0,0,0.03), rgba(0,0,0,0.4)), url(Link.png) }
+.kirby{ background-image: linear-gradient(rgba(0,0,0,0.03), rgba(0,0,0,0.4)), url(Kirby.png) }
+.sonic{ background-image: linear-gradient(rgba(0,0,0,0.03), rgba(0,0,0,0.4)), url(Sonic.png)}
+.joker{ background-image: linear-gradient(rgba(0,0,0,0.03), rgba(0,0,0,0.4)), url(Joker.png)}
+.kazuma{ background-image: linear-gradient(rgba(0,0,0,0.03), rgba(0,0,0,0.4)), url(Kazuma.png)}
+.kratos{ background-image: linear-gradient(rgba(0,0,0,0.03), rgba(0,0,0,0.4)), url(Kratos.png)}
+.nathan{ background-image: linear-gradient(rgba(0,0,0,0.03), rgba(0,0,0,0.4)), url(Nathan.png)}
+.joel{ background-image: linear-gradient(rgba(0,0,0,0.03), rgba(0,0,0,0.4)), url(Joel.png)}
+.master{ background-image: linear-gradient(rgba(0,0,0,0.03), rgba(0,0,0,0.4)), url(Master.png)}
+.slayer{ background-image: linear-gradient(rgba(0,0,0,0.03), rgba(0,0,0,0.4)), url(Slayer.png)}
+.steve{ background-image: linear-gradient(rgba(0,0,0,0.03), rgba(0,0,0,0.4)), url(Steve.png)}
+
+/* FOOTER */
+.footer-index {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+}
